@@ -12,7 +12,7 @@ class AnyResourceProviderProviderTests(unittest.TestCase):
 
         self.assertDictEqual(
             result.outs,
-            {"param1": "123", "param2": "456", "output_param": "my_output_value"},
+            {"param1": "124", "param2": "456", "output_param": "my_output_value"},
         )
 
 
