@@ -1,4 +1,4 @@
-name: pre-commit
+name: on_push
 
 # This is a Github Action workflow which runs when code is pushed to master.  It runs static
 # analysis and style checkers (via pre-commit), and runs the unit tests.

@@ -8,7 +8,7 @@ from ..provider import Provider
 class AnyResourceProvider(BaseDynamicProvider):
     """
     The provider for a AnyResource resource.
-    
+
     TODO: USE THIS TEMPLATE TO CREATE RESOURCE PROVIDERS FOR YOUR DYNAMIC PROVIDER.
 
     You should implement the `create`, `diff`, `update` and `delete` methods as
@@ -23,7 +23,6 @@ class AnyResourceProvider(BaseDynamicProvider):
 
     def __init__(self, provider_params: Provider):
         super().__init__(provider_params)
-
 
     def create(self, inputs):
 
