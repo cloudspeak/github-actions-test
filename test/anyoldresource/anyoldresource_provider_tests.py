@@ -1,7 +1,8 @@
 import unittest
 
 from github_actions_test.anyoldresource.anyoldresource_provider import (
-    AnyoldresourceProvider)
+    AnyoldresourceProvider,
+)
 
 
 class AnyoldresourceProviderProviderTests(unittest.TestCase):
