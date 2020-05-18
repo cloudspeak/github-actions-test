@@ -19,10 +19,18 @@ jobs:
 
     # These steps set up the pre-commit cache, and run pre-commit.  See
     # https://github.com/marketplace/actions/pre-commit for more information.
-    - name: set PY
+    - name: set PY environment variable
       run: echo "::set-env name=PY::$(python -c 'import hashlib, sys;print(hashlib.sha256(sys.version.encode()+sys.executable.encode()).hexdigest())')"
     - uses: actions/cache@v1
       with:
         path: ~/.cache/pre-commit
         key: pre-commit|${{ env.PY }}|${{ hashFiles('.pre-commit-config.yaml') }}
     - uses: pre-commit/action@v1.1.0
+
+    # Run the unit tests
+    - name: Install unit test dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements_dev.txt
+    - name: Run unit tests
+      run: python setup.py test
