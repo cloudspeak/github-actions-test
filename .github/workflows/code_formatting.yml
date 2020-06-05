@@ -32,7 +32,7 @@ jobs:
 
     - uses: pre-commit/action@v1.1.0
       with:
-        extra_args: check_yaml
+        extra_args: check-yaml
 
     - uses: pre-commit/action@v1.1.0
       with:
