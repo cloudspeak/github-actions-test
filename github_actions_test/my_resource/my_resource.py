@@ -4,12 +4,12 @@ from pulumi import Input, Output, ResourceOptions
 from pulumi.dynamic import Resource
 
 from ..provider import Provider
-from .dfsdfsdf_provider import DfsdfsdfProvider
+from .my_resource_provider import MyResourceProvider
 
 
-class Dfsdfsdf(Resource):
+class MyResource(Resource):
     """
-    A Dfsdfsdf resource.
+    A MyResource resource.
 
     TODO: USE THIS TEMPLATE TO CREATE RESOURCES FOR YOUR DYNAMIC PROVIDER.
 
@@ -52,7 +52,7 @@ class Dfsdfsdf(Resource):
     ):
         provider = provider if provider else Provider()
         super().__init__(
-            provider=DfsdfsdfProvider(provider),
+            provider=MyResourceProvider(provider),
             name=resource_name,
             props={"param1": param1, "param2": param2, "output_param": None},
             opts=opts,

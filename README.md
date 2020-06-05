@@ -1,4 +1,4 @@
-# GH Actions test
+# Github Actions Test
 ![Build badge](https://img.shields.io/github/workflow/status/cloudspeak/github-actions-test/on_push "Build badge")
 
 
@@ -6,8 +6,8 @@ _**TODO: Update this section of README.md with a description of your project**_
 
 _You should also do the following:_
 * _Update the `github_actions_test/provider.py` file with the parameters required by your backend provider._
-* _Update the `github_actions_test/dfsdfsdf` folder by implementing the Dfsdfsdf resource and provider_
-* _Update the `test/dfsdfsdf` folder with unit tests for your resource_
+* _Update the `github_actions_test/my_resource` folder by implementing the MyResource resource and provider_
+* _Update the `test/my_resource` folder with unit tests for your resource_
 * _Implement any additional resources using the same pattern_
 * _Update the `example` folder with an example of the `github_actions_test` package being used_
 
@@ -61,6 +61,7 @@ Code quality configuration files:
 
 ```
 .
+├── .github/workflow/on_push.yml            The Github Actions workflow
 ├── example                                 An example program which uses this provider package
 │   ├── __main__.py
 │   ├── Pulumi.dev.yaml
@@ -68,9 +69,9 @@ Code quality configuration files:
 │   └── README.md
 ├── Makefile
 ├── github_actions_test                     The main package folder with a subfolder for each resource type
-│   ├── dfsdfsdf                            The folder for a particular resource type
-│   │   ├── dfsdfsdf_provider.py            The Pulumi resource object
-│   │   └── dfsdfsdf.py                     The Dynamic Provider for the resource
+│   ├── my_resource                         The folder for a particular resource type
+│   │   ├── my_resource_provider.py         The Pulumi resource object
+│   │   └── my_resource.py                  The Dynamic Provider for the resource
 │   └── provider.py                         The backend provider configuration object
 ├── README.md
 ├── requirements_dev.txt

@@ -8,7 +8,7 @@ setup(
     version="0.0.1",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="djkfjdkfj",
+    url="https://github.com/cloudspeak/github-actions-test",
     packages=find_packages(exclude=("example")),
     python_requires=">=3.7",
     install_requires=["pulumi>=1.8.1",],
