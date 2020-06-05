@@ -1,6 +1,7 @@
+from typing import Any
+
 import pulumi
 from pulumi.dynamic import CreateResult, UpdateResult
-from typing import Any
 
 from ..base_dynamic_provider import BaseDynamicProvider
 from ..provider import Provider
@@ -23,7 +24,7 @@ class MyResourceProvider(BaseDynamicProvider):
     """
 
     def __init__(self, provider_params: Provider):
-        super().__init__(provider_params)
+        pass
 
     def create(self, props: Any) -> CreateResult:
 

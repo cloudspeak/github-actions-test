@@ -1,5 +1,5 @@
 """
-The main package for the GH Actions Test project.
+The main package for the Github Actions Test project.
 """
 
 from .provider import Provider

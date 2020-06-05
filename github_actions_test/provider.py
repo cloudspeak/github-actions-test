@@ -5,7 +5,7 @@ from pulumi import Config
 
 class Provider:
     """
-    This class should represent the configuration required by the backend provider. 
+    This class should represent the configuration required by the backend provider.
     Typically this would include account numbers, credentials, service urls, database
     names, etc.  The recommended pattern, as shown below, is to allow a default instance
     to be created which reads everything from the config, but optionally allow

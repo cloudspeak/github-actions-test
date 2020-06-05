@@ -1,4 +1,4 @@
-# GH Actions Test
+# Github Actions Test
 ![Build badge](https://img.shields.io/github/workflow/status/cloudspeak/github-actions-test/on_push "Build badge")
 
 
