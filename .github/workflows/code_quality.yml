@@ -1,0 +1,23 @@
+name: unit_tests
+
+# This is a Github Action workflow which checks code quality using pylint whenever a
+# commit is made to master
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+
+    # Checkout the code and install Python
+    - uses: actions/checkout@v1
+    - uses: actions/setup-python@v1
+
+    # Run pylint
+    - run: pip install pylint
+    - run: pylint **/*.py
+
