@@ -1,5 +1,6 @@
 import pulumi
 from pulumi.dynamic import CreateResult, UpdateResult
+from typing import Any
 
 from ..base_dynamic_provider import BaseDynamicProvider
 from ..provider import Provider
@@ -27,12 +28,16 @@ class MyResourceProvider(BaseDynamicProvider):
     def create(self, props: Any) -> CreateResult:
 
         pulumi.info(
-            (f"Creating MyResource resource "
-             f" (param1={props.get('param1')},param2={props.get('param2')})...")
+            (
+                f"Creating MyResource resource "
+                f" (param1={props.get('param1')},param2={props.get('param2')})..."
+            )
         )
         pulumi.info(
-            (f"Using provider parameters ({self.provider_params.provider_param1},"
-             f"{self.provider_params.provider_param2})")
+            (
+                f"Using provider parameters ({self.provider_params.provider_param1},"
+                f"{self.provider_params.provider_param2})"
+            )
         )
 
         return CreateResult(
@@ -42,12 +47,16 @@ class MyResourceProvider(BaseDynamicProvider):
     def update(self, _id: str, _olds: Any, _news: Any) -> UpdateResult:
 
         pulumi.info(
-            (f"Updating MyResource[{_id}] to "
-             f" (param1={_news.get('param1')},param2={_news.get('param2')})...")
+            (
+                f"Updating MyResource[{_id}] to "
+                f" (param1={_news.get('param1')},param2={_news.get('param2')})..."
+            )
         )
         pulumi.info(
-            (f"Using provider parameters ({self.provider_params.provider_param1},"
-             f"{self.provider_params.provider_param2})")
+            (
+                f"Using provider parameters ({self.provider_params.provider_param1},"
+                f"{self.provider_params.provider_param2})"
+            )
         )
 
         return UpdateResult(outs={**_news, "output_param": "my_output_value"})
@@ -55,6 +64,8 @@ class MyResourceProvider(BaseDynamicProvider):
     def delete(self, _id: str, _props: Any) -> None:
         pulumi.info(f"Deleting MyResource[{_id}]")
         pulumi.info(
-            (f"Using provider parameters ({self.provider_params.provider_param1},"
-             f"{self.provider_params.provider_param2})")
+            (
+                f"Using provider parameters ({self.provider_params.provider_param1},"
+                f"{self.provider_params.provider_param2})"
+            )
         )

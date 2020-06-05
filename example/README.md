@@ -1,4 +1,4 @@
-# Github Actions Test example
+# GH Actions Test example
 
 This folder contains an example Pulumi program which demonstrates use of the `github_actions_test` package.
 

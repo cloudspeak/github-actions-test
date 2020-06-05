@@ -29,4 +29,3 @@ jobs:
     - uses: pre-commit/action@v1.1.0
       with:
         extra_args: pylint
-
