@@ -1,5 +1,8 @@
 # Github Actions Test
-![Build badge](https://img.shields.io/github/workflow/status/cloudspeak/github-actions-test/on_push "Build badge")
+![Code formatting badge](https://img.shields.io/github/workflow/status/cloudspeak/github-actions-test/code_formatting?label=code%20formatting "Code formatting badge")
+![Code quality badge](https://img.shields.io/github/workflow/status/cloudspeak/github-actions-test/code_quality?label=code%20quality "Code quality badge")
+![Coding style badge](https://img.shields.io/github/workflow/status/cloudspeak/github-actions-test/coding_style?label=coding%20style "Coding style badge")
+![Unit tests badge](https://img.shields.io/github/workflow/status/cloudspeak/github-actions-test/unit_tests?label=unit%20tests "Unit tests badge")
 
 
 _**TODO: Update this section of README.md with a description of your project**_
