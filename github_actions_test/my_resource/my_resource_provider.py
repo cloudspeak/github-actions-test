@@ -4,8 +4,6 @@ import pulumi
 from pulumi.dynamic import CreateResult, UpdateResult
 
 from ..base_dynamic_provider import BaseDynamicProvider
-from ..provider import Provider
-
 
 class MyResourceProvider(BaseDynamicProvider):
     """
