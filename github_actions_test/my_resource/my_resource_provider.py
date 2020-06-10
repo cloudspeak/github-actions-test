@@ -24,7 +24,7 @@ class MyResourceProvider(BaseDynamicProvider):
     """
 
     def __init__(self, provider_params: Provider):
-        super(MyResourceProvider, self).__init__()
+        super(MyResourceProvider, self).__init__(provider_params)
 
     def create(self, props: Any) -> CreateResult:
 
