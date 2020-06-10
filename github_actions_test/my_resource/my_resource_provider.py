@@ -6,6 +6,7 @@ from pulumi.dynamic import CreateResult, UpdateResult
 from ..base_dynamic_provider import BaseDynamicProvider
 
 
+
 class MyResourceProvider(BaseDynamicProvider):
     """
     The provider for a MyResource resource.
