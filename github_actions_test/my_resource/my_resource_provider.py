@@ -5,6 +5,7 @@ from pulumi.dynamic import CreateResult, UpdateResult
 
 from ..base_dynamic_provider import BaseDynamicProvider
 
+
 class MyResourceProvider(BaseDynamicProvider):
     """
     The provider for a MyResource resource.
@@ -20,9 +21,6 @@ class MyResourceProvider(BaseDynamicProvider):
     See https://www.pulumi.com/docs/intro/concepts/programming-model/#dynamicproviders
     for more information.
     """
-
-    def __init__(self, provider_params: Provider):
-        super(MyResourceProvider, self).__init__(provider_params)
 
     def create(self, props: Any) -> CreateResult:
 
