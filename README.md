@@ -1,4 +1,9 @@
 # Github Actions Test
+![Code formatting badge](https://img.shields.io/github/workflow/status/cloudspeak/github-actions-test/code_formatting?label=code%20formatting "Code formatting badge")
+![Code quality badge](https://img.shields.io/github/workflow/status/cloudspeak/github-actions-test/code_quality?label=code%20quality "Code quality badge")
+![Coding style badge](https://img.shields.io/github/workflow/status/cloudspeak/github-actions-test/coding_style?label=coding%20style "Coding style badge")
+![Unit tests badge](https://img.shields.io/github/workflow/status/cloudspeak/github-actions-test/unit_tests?label=unit%20tests "Unit tests badge")
+
 
 _**TODO: Update this section of README.md with a description of your project**_
 
@@ -59,6 +64,7 @@ Code quality configuration files:
 
 ```
 .
+├── .github/workflow/on_push.yml            The Github Actions workflow
 ├── example                                 An example program which uses this provider package
 │   ├── __main__.py
 │   ├── Pulumi.dev.yaml

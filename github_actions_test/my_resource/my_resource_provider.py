@@ -1,12 +1,12 @@
 from typing import Any
 
 import pulumi
-from pulumi.dynamic import CreateResult, ResourceProvider, UpdateResult
+from pulumi.dynamic import CreateResult, UpdateResult
 
-from ..provider import Provider
+from ..base_dynamic_provider import BaseDynamicProvider
 
 
-class MyResourceProvider(ResourceProvider):
+class MyResourceProvider(BaseDynamicProvider):
     """
     The provider for a MyResource resource.
 
@@ -14,15 +14,13 @@ class MyResourceProvider(ResourceProvider):
 
     You should implement the `create`, `diff`, `update` and `delete` methods as
     necessary.  The `Provider` instance which is passed through the constructor should
-    define the configuration used to communicate with the backend service.
+    define the configuration used to communicate with the backend service.  It is made
+    available by the base class through the
+    `provider_params` attribute.
 
     See https://www.pulumi.com/docs/intro/concepts/programming-model/#dynamicproviders
     for more information.
     """
-
-    def __init__(self, provider_params: Provider):
-        super(MyResourceProvider, self).__init__()
-        self.provider_params = provider_params
 
     def create(self, props: Any) -> CreateResult:
 
