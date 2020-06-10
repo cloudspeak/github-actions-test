@@ -11,7 +11,7 @@ setup(
     url="https://github.com/cloudspeak/github-actions-test",
     packages=find_packages(exclude=("example")),
     python_requires=">=3.7",
-    install_requires=["pulumi>=1.8.1",],
-    test_requires=["pulumi>=1.8.1",],
+    install_requires=["pulumi>=1.8.1", "pulumi-aws>=1.0.0",],
+    test_requires=["pulumi>=1.8.1", "pulumi-aws>=1.0.0",],
     test_suite="test",
 )
